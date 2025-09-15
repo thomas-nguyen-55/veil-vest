@@ -1,31 +1,31 @@
-# Veil Vest - Privacy-First Asset Management
+# 🛡️ Veil Vest
 
-## Overview
+> **Privacy-First Asset Management Platform**  
+> *Where Confidentiality Meets Blockchain Innovation*
 
-Veil Vest is a cutting-edge decentralized application that leverages Fully Homomorphic Encryption (FHE) to provide privacy-preserving asset management and vesting solutions. Built on the Zama network with Sepolia testnet support, it ensures complete privacy while maintaining transparency and security.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 
-## Features
+---
 
-- **Privacy-First Design**: All sensitive data is encrypted using FHE technology
-- **Multi-Wallet Support**: Compatible with Rainbow, MetaMask, and other popular wallets
-- **Secure Vesting**: Encrypted vesting schedules and asset management
-- **Real-time Analytics**: Privacy-preserving analytics and reporting
-- **Decentralized Governance**: Community-driven decision making
+## 🌟 What Makes Veil Vest Special?
 
-## Technology Stack
+Veil Vest revolutionizes asset management by combining **Fully Homomorphic Encryption (FHE)** with blockchain technology. Unlike traditional platforms, we ensure your financial data remains private while maintaining complete transparency and security.
 
-- **Frontend**: React 18, TypeScript, Vite
-- **UI Components**: shadcn/ui, Tailwind CSS
-- **Blockchain**: Zama FHE, Sepolia Testnet
-- **Wallet Integration**: RainbowKit, Wagmi, Viem
-- **State Management**: TanStack Query
-- **Encryption**: Fully Homomorphic Encryption (FHE)
+### 🔐 Core Innovation
+- **Zero-Knowledge Vesting**: Your vesting schedules are encrypted but verifiable
+- **Privacy-Preserving Analytics**: Get insights without exposing sensitive data
+- **FHE-Powered Smart Contracts**: Revolutionary encryption on-chain
+- **Multi-Wallet Ecosystem**: Seamless integration with your preferred wallet
 
-## Getting Started
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
-
-- Node.js 18+ and npm
+- Node.js 18+ 
 - A Web3 wallet (MetaMask, Rainbow, etc.)
 - Sepolia testnet ETH for gas fees
 
@@ -34,114 +34,221 @@ Veil Vest is a cutting-edge decentralized application that leverages Fully Homom
 ```bash
 # Clone the repository
 git clone https://github.com/thomas-nguyen-55/veil-vest.git
-
-# Navigate to the project directory
 cd veil-vest
 
 # Install dependencies
 npm install
 
-# Start the development server
+# Start development server
 npm run dev
 ```
 
-### Environment Configuration
+### Environment Setup
 
-Create a `.env.local` file in the root directory:
+Create a `.env.local` file:
 
 ```env
-NEXT_PUBLIC_CHAIN_ID=11155111
-NEXT_PUBLIC_RPC_URL=https://sepolia.infura.io/v3/b18fb7e6ca7045ac83c41157ab93f990
-NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=2ec9743d0d0cd7fb94dee1a7e6d33475
-NEXT_PUBLIC_INFURA_API_KEY=b18fb7e6ca7045ac83c41157ab93f990
-NEXT_PUBLIC_RPC_URL=https://1rpc.io/sepolia
+# Chain Configuration
+VITE_CHAIN_ID=11155111
+VITE_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_KEY
+
+# Wallet Connect
+VITE_WALLET_CONNECT_PROJECT_ID=YOUR_WALLET_CONNECT_PROJECT_ID
+
+# Optional: Alternative RPC
+VITE_ALTERNATIVE_RPC_URL=https://1rpc.io/sepolia
 ```
 
-## Smart Contract
+---
 
-The project includes a comprehensive FHE-enabled smart contract that handles:
+## 🏗️ Architecture
 
-- Encrypted asset vesting schedules
-- Privacy-preserving balance queries
-- Secure fund management
-- Decentralized governance voting
+### Frontend Stack
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   React 18      │    │   TypeScript    │    │   Tailwind CSS  │
+│   (Modern Hooks)│    │   (Type Safety) │    │   (Styling)     │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         └───────────────────────┼───────────────────────┘
+                                 │
+                    ┌─────────────────┐
+                    │   Vite Build    │
+                    │   (Fast HMR)    │
+                    └─────────────────┘
+```
 
-### Contract Features
+### Blockchain Integration
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   RainbowKit    │    │     Wagmi       │    │      Viem       │
+│   (Wallet UI)   │    │   (React Hooks) │    │   (TypeScript)  │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         └───────────────────────┼───────────────────────┘
+                                 │
+                    ┌─────────────────┐
+                    │   Sepolia FHE   │
+                    │   (Zama Network)│
+                    └─────────────────┘
+```
 
-- **FHE Encryption**: All sensitive data is encrypted on-chain
-- **Vesting Management**: Flexible vesting schedules with privacy
-- **Access Control**: Role-based permissions with encrypted verification
-- **Audit Trail**: Privacy-preserving transaction logging
+---
 
-## Development
+## 🔧 Development
 
 ### Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server with hot reload |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint for code quality |
 
 ### Project Structure
 
 ```
-src/
-├── components/          # Reusable UI components
-├── hooks/              # Custom React hooks
-├── lib/                # Utility functions and configurations
-├── pages/              # Application pages
-├── styles/             # Global styles and themes
-└── types/              # TypeScript type definitions
+veil-vest/
+├── 📁 contracts/           # Smart contracts
+│   └── VeilVest.sol       # FHE-enabled vesting contract
+├── 📁 src/
+│   ├── 📁 components/      # React components
+│   │   ├── 📁 ui/         # Reusable UI components
+│   │   ├── WalletConnect.tsx
+│   │   └── ClaimTokens.tsx
+│   ├── 📁 hooks/          # Custom React hooks
+│   │   └── useVeilVest.ts # Contract interaction
+│   ├── 📁 lib/            # Utilities & config
+│   │   ├── config.ts      # App configuration
+│   │   ├── contracts.ts   # Contract addresses & ABIs
+│   │   └── wagmi.ts       # Wagmi setup
+│   └── 📁 pages/          # Application pages
+├── 📄 README.md           # This file
+└── 📄 DEPLOYMENT.md       # Deployment guide
 ```
 
-## Deployment
+---
 
-### Vercel Deployment
+## 🔒 Security Features
 
-1. Connect your GitHub repository to Vercel
-2. Configure environment variables in Vercel dashboard
-3. Deploy automatically on push to main branch
+### Privacy Protection
+- ✅ **FHE Encryption**: All sensitive data encrypted on-chain
+- ✅ **Zero-Knowledge Proofs**: Verify without revealing
+- ✅ **Private Key Security**: Keys never leave your device
+- ✅ **Encrypted Communications**: All data transmission secured
 
-### Manual Deployment
+### Smart Contract Security
+- ✅ **Audited Code**: Comprehensive security reviews
+- ✅ **Access Controls**: Role-based permissions
+- ✅ **Emergency Functions**: Owner controls for critical situations
+- ✅ **Input Validation**: Comprehensive parameter checking
 
-```bash
-# Build the project
-npm run build
+---
 
-# Deploy to your preferred hosting service
-# The build files will be in the 'dist' directory
-```
+## 🌐 Deployment
 
-## Security
+### Vercel (Recommended)
 
-- All sensitive operations use FHE encryption
-- Smart contracts are audited and tested
-- Private keys never leave the user's device
-- All transactions are verifiable but privacy-preserving
+1. **Connect Repository**
+   ```bash
+   # Push to GitHub
+   git push origin main
+   ```
 
-## Contributing
+2. **Deploy on Vercel**
+   - Import project from GitHub
+   - Configure environment variables
+   - Deploy automatically
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+3. **Environment Variables**
+   ```env
+   VITE_CHAIN_ID=11155111
+   VITE_RPC_URL=your_rpc_url
+   VITE_WALLET_CONNECT_PROJECT_ID=your_project_id
+   ```
 
-## License
+📖 **Detailed Guide**: See [DEPLOYMENT.md](./DEPLOYMENT.md)
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+---
 
-## Support
+## 🤝 Contributing
 
-For support and questions:
-- Create an issue on GitHub
-- Join our community Discord
-- Follow us on Twitter
+We welcome contributions! Here's how to get started:
 
-## Roadmap
+### Development Workflow
+1. **Fork** the repository
+2. **Create** a feature branch: `git checkout -b feature/amazing-feature`
+3. **Commit** your changes: `git commit -m 'Add amazing feature'`
+4. **Push** to the branch: `git push origin feature/amazing-feature`
+5. **Open** a Pull Request
 
-- [ ] Multi-chain support
-- [ ] Advanced FHE features
-- [ ] Mobile app development
-- [ ] Integration with more DeFi protocols
-- [ ] Enhanced privacy analytics
+### Code Standards
+- **TypeScript**: Full type safety required
+- **ESLint**: Follow configured linting rules
+- **Testing**: Add tests for new features
+- **Documentation**: Update docs for API changes
+
+---
+
+## 📊 Roadmap
+
+### Phase 1: Core Platform ✅
+- [x] FHE smart contract implementation
+- [x] Wallet integration (RainbowKit)
+- [x] Basic vesting functionality
+- [x] Privacy-preserving UI
+
+### Phase 2: Enhanced Features 🚧
+- [ ] Multi-chain support (Ethereum, Polygon)
+- [ ] Advanced FHE operations
+- [ ] Mobile application
+- [ ] Governance token integration
+
+### Phase 3: Ecosystem 🎯
+- [ ] DeFi protocol integrations
+- [ ] Advanced analytics dashboard
+- [ ] API for third-party developers
+- [ ] Enterprise solutions
+
+---
+
+## 🆘 Support & Community
+
+### Getting Help
+- 📖 **Documentation**: Check our comprehensive docs
+- 🐛 **Issues**: Report bugs on GitHub Issues
+- 💬 **Discussions**: Join community discussions
+- 📧 **Contact**: Reach out via GitHub
+
+### Community Links
+- 🌐 **Website**: [Coming Soon]
+- 🐦 **Twitter**: [@veilvest]
+- 💬 **Discord**: [Join Community]
+- 📺 **YouTube**: [Tutorials & Updates]
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Zama Network** for FHE technology
+- **RainbowKit** for wallet integration
+- **shadcn/ui** for beautiful components
+- **Vite** for lightning-fast builds
+- **Open Source Community** for inspiration
+
+---
+
+<div align="center">
+
+**Built with ❤️ for Privacy & Innovation**
+
+[⭐ Star this repo](https://github.com/thomas-nguyen-55/veil-vest) | [🐛 Report Bug](https://github.com/thomas-nguyen-55/veil-vest/issues) | [💡 Request Feature](https://github.com/thomas-nguyen-55/veil-vest/issues)
+
+</div>
